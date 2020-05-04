@@ -1,4 +1,4 @@
-# Real Image Denoising with Feature Attention
+# Attention Prior for Real Image Restoration
 This repository is for Attention Prior for Real Image Restoration introduced in the following paper
 
 [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes], [Lars Petersson] "Attention Prior for Real Image Restoration", [ArXiv, 2020](http://arxiv.org/abs/2004.13524) 
