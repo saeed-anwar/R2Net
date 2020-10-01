@@ -1,4 +1,4 @@
-# Attention Base Real Image Restoration
+# Attention Based Real Image Restoration
 This repository is for Attention Based Real Image Restoration introduced in the following paper
 
 [Saeed Anwar](https://saeed-anwar.github.io/),  [Nick Barnes], [Lars Petersson] "Attention Based Real Image Restoration", [arXiv, 2020](http://arxiv.org/abs/2004.13524) 
