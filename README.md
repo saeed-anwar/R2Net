@@ -94,15 +94,15 @@ CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IE
 
 The visual comparisons for 4x super-resolution against several state-of-the-art algorithms on an image from Urban100 dataset. Our R<sup>2</sup>Ne results are the most accurate.
 <p align="center">
-  <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual1.png">
-   <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual1.png">
+  <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual1.png">
+   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual2.png">
 </p>
 
 #### RainRemoval Quantitative Results
 
 Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
-  <img width="900" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-psnr.png">
+  <img width="500" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-psnr.png">
 </p>
 The performance of super-resolution algorithms on Set5, Set14, BSD100, and URBAN100 datasets for upscaling factors of 2, 3, and 4.
 The bold highlighted results are the best on single image super-resolution.
@@ -126,8 +126,8 @@ CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IE
 
 The visual comparisons for 4x super-resolution against several state-of-the-art algorithms on an image from Urban100 dataset. Our R<sup>2</sup>Ne results are the most accurate.
 <p align="center">
-  <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual1.png">
-   <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual2.png">
+  <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual1.png">
+   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual2.png">
 </p>
 
 #### JPEGCompression Quantitative Results
