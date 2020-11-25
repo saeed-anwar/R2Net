@@ -68,12 +68,11 @@ The performance of super-resolution algorithms on Set5, Set14, BSD100, and URBAN
 The bold highlighted results are the best on single image super-resolution.
 
 ## Rain Removal
-The architecture for super-resolution.
+The architecture for Rain Removal and the subsequent restoration tasks. There are two modifications: the change in position of long skip connection and removal of upsampling
+layer.
 
 <p align="center">
-  <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR.png">
-  <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/EAM.png">
-
+  <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-all.png">
 </p>
 
 ### RainRemoval Test
