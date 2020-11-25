@@ -51,18 +51,18 @@ CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IE
 ### SR Results
 **All the results for SuperResolution R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
 
-### SR Visual Results
+#### SR Visual Results
 
 Comparison of our method against the state-of-the-art algorithms on real images containing Gaussian noise from Darmstadt Noise Dataset (DND) benchmark for different denoising algorithms. Difference can be better viewed in magnified view.
 <p align="center">
   <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-visual.png">
 </p>
 
-### SR Quantitative Results
+#### SR Quantitative Results
 
 Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
-  <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-psnr.png">
+  <img width="900" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-psnr.png">
 </p>
 
 
