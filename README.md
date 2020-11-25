@@ -9,10 +9,10 @@ The model is built in PyTorch 0.4.0, PyTorch 0.4.1 and tested on Ubuntu 14.04/16
 ## Contents
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
-3. [Rain Removal](#rain)
-4. [Super resolution](#SR)
-5. [JPEG Compression](#jpeg)
-6. [Real Denoising](#denoising)
+3. [Super-resolution](#super-resolution)
+4. [Rain-Removal](#rain-removal)
+5. [JPEG-Compression](#jpeg-compression)
+6. [Real-Denoising](#real-denoising)
 7. [Citation](#citation)
 8. [Acknowledgements](#acknowledgements)
 
@@ -31,7 +31,7 @@ Deep convolutional neural networks perform better on images containing spatially
 - imageio
 - pillow
 
-## Rain Removal
+## Super-resolution
 The proposed network produces remarkably higher numerical accuracy and better visual image quality than the classical state-of-the-art and CNN algorithms when being evaluated on the three conventional benchmark and three real-world datasets
 
 <p align="center">
@@ -71,6 +71,9 @@ Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
   <img width="400" src="https://github.com/saeed-anwar/IERD/blob/master/FIgs/DnDTable.png">
 </p>
+
+
+## Rain Removal
 
 ## Ablation Studies
 
