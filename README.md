@@ -33,7 +33,7 @@ The architecture for super-resolution.
 
 <p align="center">
   <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR.png">
-  <img width="500" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/EAM.png">
+  <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/EAM.png">
 
 </p>
 
@@ -62,7 +62,7 @@ Comparison of our method against the state-of-the-art algorithms on real images 
 
 Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
-  <img width="400" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-psnr.png">
+  <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-psnr.png">
 </p>
 
 
