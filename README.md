@@ -28,7 +28,7 @@ Deep convolutional neural networks perform better on images containing spatially
 - pillow
 
 ---
----
+
 ## Super-resolution
 The architecture for super-resolution.
 
@@ -69,7 +69,7 @@ The performance of super-resolution algorithms on Set5, Set14, BSD100, and URBAN
 The bold highlighted results are the best on single image super-resolution.
 
 ---
----
+
 ## Rain Removal
 The architecture for Rain Removal and the subsequent restoration tasks. There are two modifications: the change in position of long skip connection and removal of upsampling
 layer.
@@ -112,7 +112,7 @@ The visual comparisons on rainy images. The first figure is showing the plate wh
 The average PSNR(dB)/SSIM from different methods on raindrop dataset.
 
 ---
----
+
 ## JPEG Compression
 The architecture is same for the rest of restoration tasks.
 
@@ -156,11 +156,12 @@ Average PSNR/SSIM for JPEG image deblocking for quality factors of 10, 20, 30, a
 </p>
 
 ---
----
+
 ## Real Denoising
 
 **The real image denoising can be found [here](https://github.com/saeed-anwar/RIDNet)**
 
+---
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
