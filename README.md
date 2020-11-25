@@ -3,9 +3,6 @@ This repository is for Attention Based Real Image Restoration introduced in the 
 
 [Saeed Anwar](https://saeed-anwar.github.io/),  Nick Barnes, and Lars Petersson, "Attention Based Real Image Restoration", [arXiv, 2020](http://arxiv.org/abs/2004.13524) 
 
-The model is built in PyTorch 0.4.0, PyTorch 0.4.1 and tested on Ubuntu 14.04/16.04 environment (Python3.6, CUDA9.0, cuDNN5.1). 
-
-
 ## Contents
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
