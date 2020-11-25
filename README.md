@@ -137,7 +137,7 @@ Average PSNR/SSIM for JPEG image deblocking for quality factors of 10, 20, 30, a
 </p>
 
 
-## Real Image Denoising
+## Real Denoising
 
 **The real image denoising can be found [here](https://github.com/saeed-anwar/RIDNet)**
 
