@@ -29,7 +29,7 @@ Deep convolutional neural networks perform better on images containing spatially
 - pillow
 
 ## Super-resolution
-The proposed network produces remarkably higher numerical accuracy and better visual image quality than the classical state-of-the-art and CNN algorithms when being evaluated on the three conventional benchmark and three real-world datasets
+The architecture for super-resolution.
 
 <p align="center">
   <img width="700" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR.png">
@@ -37,38 +37,32 @@ The proposed network produces remarkably higher numerical accuracy and better vi
 
 </p>
 
-Denoising results: In the first row, an image is corrupted by the Gaussian noise with σ = 50 from the BSD68 dataset. In the second row, a sample image from the RNI15 real noisy dataset. Our results have the best PSNR score for synthetic images, and unlike other methods, it does not have over-smoothing or over-contrasting artifacts. 
+### SR Test
+1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
 
+2. cd to '/TestCode/code', run the following scripts and find the results in directory **SR_Results**.
 
-### Test
-1. Download the trained models and code of our paper from [Google Drive](https://drive.google.com/file/d/1DV9-OgvYoR4ELQZY-R7vZiX5nTf-NZtX/view?usp=sharing). The total size for all models is **3.1MB.**
-
-2. cd to '/IERDTestCode/code', run the following scripts and find the results in directory **IERD_Results**.
-
-    **You can use the following script to test the algorithm. The first script is without self-ensembler and the second one is with self-ensemble.**
+    **You can use the following script to test the algorithm.**
 
 ``` #Normal
 CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSID_Results' --testpath ../noisy --testset SIDD
 ```
 
-``` #Ensemble
-CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSIDPlus_Results' --testpath ../noisy --testset SIDD --self_ensemble
-```
+### SR Results
+**All the results for SuperResolution R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
 
-
-### Results
-**All the results for IERD can be downloaded from GoogleDrive from**  [SSID](https://drive.google.com/file/d/1em70fbrVCggxdv1vi0dLqriAR_f2lPjc/view?usp=sharing) (118MB), [RNI15](https://drive.google.com/file/d/1NUmFpS7Zl4f70OZJVd96t35wSGSyvfMS/view?usp=sharing) (9MB) and [DnD](https://drive.google.com/file/d/1IfTi6ZImNsrzqC6oFhgFF8Z9QKvZeAfE/view?usp=sharing) (2.3GB). 
-
-### DnD Results
+### SR Visual Results
 
 Comparison of our method against the state-of-the-art algorithms on real images containing Gaussian noise from Darmstadt Noise Dataset (DND) benchmark for different denoising algorithms. Difference can be better viewed in magnified view.
 <p align="center">
-  <img width="800" src="https://github.com/saeed-anwar/IERD/blob/master/FIgs/DnDFig.png">
+  <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-visual.png">
 </p>
+
+### SR Quantitative Results
 
 Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
-  <img width="400" src="https://github.com/saeed-anwar/IERD/blob/master/FIgs/DnDTable.png">
+  <img width="400" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-psnr.png">
 </p>
 
 
