@@ -107,18 +107,28 @@ The average PSNR(dB)/SSIM from different methods on raindrop dataset.
 The architecture is same for the rest of restoration tasks.
 
 ### JPEG Compression Test
-1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
+1. Download the trained models and code for JPEG Compression of R<sup>2</sup>Net from [Google Drive](https://drive.google.com/file/d/1sABy-hp60fmJdlk2HxUnat65dxftzR4a/view?usp=sharing). The total size for all models is 43MB.**
 
-2. cd to '/TestCode/code', run the following scripts and find the results in directory **SR_Results**.
+2. cd to '/R2NetJPEGTestCode/code', either run **bash TestScripts.sh** or run the following individual commands and find the results in directory **R2Net_Results**.
 
     **You can use the following script to test the algorithm.**
 
-``` #Normal
-CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSID_Results' --testpath ../noisy --testset SIDD
+``` 
+# Q10
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 10 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_Q10.pt --test_only --save_results --save 'R2NET_JPEGQ10' --testpath ../noisy --testset LIVE1
+
+# Q20
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 20 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_Q20.pt --test_only --save_results --save 'R2NET_JPEGQ20' --testpath ../noisy --testset LIVE1
+
+# Q30
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 30 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_Q30.pt --test_only --save_results --save 'R2NET_JPEGQ30' --testpath ../noisy --testset LIVE1
+
+# Q40
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 40 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_Q40.pt --test_only --save_results --save 'R2NET_JPEGQ40' --testpath ../noisy --testset LIVE1
 ```
 
 ### JPEG Compression Results
-**All the results for JPEG Compression R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
+**If you don't want to re-run the models and save some computation, then all the results for JPEG Compression R<sup>2</sup>Net can be downloaded from**  [LIVE1](https://drive.google.com/file/d/1TGJgkJoJn6Jhbf0km3YRb_ITos0S3EeU/view?usp=sharing) (51.5MB). 
 
 ####  Visual Results
 
