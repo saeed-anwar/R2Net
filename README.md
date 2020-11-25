@@ -35,7 +35,7 @@ Deep convolutional neural networks perform better on images containing spatially
 The proposed network produces remarkably higher numerical accuracy and better visual image quality than the classical state-of-the-art and CNN algorithms when being evaluated on the three conventional benchmark and three real-world datasets
 
 <p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/IERD/blob/master/FIgs/Main.png">
+  <img width="500" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR.png">
 </p>
 
 Denoising results: In the first row, an image is corrupted by the Gaussian noise with σ = 50 from the BSD68 dataset. In the second row, a sample image from the RNI15 real noisy dataset. Our results have the best PSNR score for synthetic images, and unlike other methods, it does not have over-smoothing or over-contrasting artifacts. 
