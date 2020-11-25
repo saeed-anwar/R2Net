@@ -18,13 +18,12 @@ Deep convolutional neural networks perform better on images containing spatially
 
 
 ## Requirements
-- The model is built in PyTorch 0.4.0, PyTorch 0.4.1 
+- PyTorch 0.4.0, PyTorch 0.4.1 
 - Tested on Ubuntu 14.04/16.04 environment 
+- torchvision=0.2.1
 - python 3.6
 - CUDA 9.0 
 - cuDNN 5.1 
-- pytorch=0.4.1
-- torchvision=0.2.1
 - imageio
 - pillow
 
