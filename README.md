@@ -51,14 +51,14 @@ CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IE
 ### SR Results
 **All the results for SuperResolution R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
 
-#### SR Visual Results
+#### Visual Results
 
 The visual comparisons for 4x super-resolution against several state-of-the-art algorithms on an image from Urban100 dataset. Our R<sup>2</sup>Ne results are the most accurate.
 <p align="center">
   <img width="800" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-SR-visual.png">
 </p>
 
-#### SR Quantitative Results
+#### Quantitative Results
 
 Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
@@ -90,25 +90,25 @@ CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IE
 ### RainRemoval Results
 **All the results for  Rain Removal R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
 
-#### RainRemoval Visual Results
+#### Visual Results
 
-The visual comparisons for 4x super-resolution against several state-of-the-art algorithms on an image from Urban100 dataset. Our R<sup>2</sup>Ne results are the most accurate.
+The visual comparisons on rainy images. The first figure is showing the plate which is affected by raindrops. Our method is consistent in restoring raindrop affected areas. Similarly, in the second example of a rainy image, the cropped region is showing the road sign affected by raindrops. Our method recovers the distorted colors closer to the ground-truth.
 <p align="center">
   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual1.png">
    <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual2.png">
 </p>
 
-#### RainRemoval Quantitative Results
+#### Quantitative Results
 
-Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
 <p align="center">
   <img width="500" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-psnr.png">
 </p>
-The performance of super-resolution algorithms on Set5, Set14, BSD100, and URBAN100 datasets for upscaling factors of 2, 3, and 4.
-The bold highlighted results are the best on single image super-resolution.
+The average PSNR(dB)/SSIM from different methods on raindrop dataset.
 
 ## JPEG Compression
-### JPEGCompression Test
+The architecture is same for the rest of restoration tasks.
+
+### JPEG Compression Test
 1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
 
 2. cd to '/TestCode/code', run the following scripts and find the results in directory **SR_Results**.
@@ -119,28 +119,28 @@ The bold highlighted results are the best on single image super-resolution.
 CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSID_Results' --testpath ../noisy --testset SIDD
 ```
 
-### JPEGCompression Results
+### JPEG Compression Results
 **All the results for JPEG Compression R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
 
-#### JPEGCompression Visual Results
+####  Visual Results
 
-The visual comparisons for 4x super-resolution against several state-of-the-art algorithms on an image from Urban100 dataset. Our R<sup>2</sup>Ne results are the most accurate.
+sample images of Monarch and parrot with the artifacts having a quality factor of 20. Our R<sup>2</sup>Net restore texture correctly, specifically the line, as shown in the zoomed version of the restored patch in Monarch images. Moreover, R<sup>2</sup>Net restores the texture accurately on the face of the parrot in the second image.
 <p align="center">
   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual1.png">
    <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-visual2.png">
 </p>
 
-#### JPEGCompression Quantitative Results
+#### Quantitative Results
 
-Mean PSNR and SSIM of the denoising methods evaluated on the real images dataset
+Average PSNR/SSIM for JPEG image deblocking for quality factors of 10, 20, 30, and 40 on LIVE1 dataset. The best results are in bold.
 <p align="center">
   <img width="900" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-jpeg-psnr.png">
 </p>
-The performance of super-resolution algorithms on Set5, Set14, BSD100, and URBAN100 datasets for upscaling factors of 2, 3, and 4.
-The bold highlighted results are the best on single image super-resolution.
 
-## Ablation Studies
 
+## Real Image Denoising
+
+**The real image denoising can be found [here](https://github.com/saeed-anwar/RIDNet)**
 
 
 ## Citation
@@ -154,6 +154,7 @@ If you find the code helpful in your resarch or work, please cite the following 
     archivePrefix={arXiv},
     primaryClass={cs.CV}
 }
+
 @article{anwar2019ridnet,
   title={Real Image Denoising with Feature Attention},
   author={Anwar, Saeed and Barnes, Nick},
