@@ -75,25 +75,29 @@ layer.
 </p>
 
 ### RainRemoval Test
-1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
+1. The trained models and code for rain removal can be downloaded from [here](https://drive.google.com/file/d/1mlQgVUA1GDTfLjYDPAf13w1YMBGrKMo5/view?usp=sharing). The total size for all models is **121.5MB.**
 
-2. cd to '/TestCode/code', run the following scripts and find the results in directory **SR_Results**.
+2. cd to '/R2NetRainRemovalTestCode/code',  either run **bash TestScripts.sh** or run the following individual commands and find the results in directory **R2NET_DeRainResults**.
 
     **You can use the following script to test the algorithm.**
 
 ``` #Normal
-CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSID_Results' --testpath ../noisy --testset SIDD
+# test_a
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_RainRemoval.pt --test_only --save_results --save 'R2NET_test_a' --testpath ../rainy --testset test_a
+
+# test_b
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_RainRemoval.pt --test_only --save_results --save 'R2NET_test_b' --testpath ../rainy --testset test_b
 ```
 
 ### RainRemoval Results
-**All the results for  Rain Removal R<sup>2</sup>Net can be downloaded from**  [SET5]() (??MB), [SET12]() (??MB), [BSD100]() (??MB) and [Urban100]() (??GB). 
+**All the results for  Rain Removal R<sup>2</sup>Net can be downloaded from [here](https://drive.google.com/file/d/1GUJ-2G8rBjeXGaUctHDc6OkkpYmC4T3b/view?usp=sharing) for both DeRain's test_a and test_b datasets.** 
 
 #### Visual Results
 
 The visual comparisons on rainy images. The first figure is showing the plate which is affected by raindrops. Our method is consistent in restoring raindrop affected areas. Similarly, in the second example of a rainy image, the cropped region is showing the road sign affected by raindrops. Our method recovers the distorted colors closer to the ground-truth.
 <p align="center">
   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual1.png">
-   <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual2.png">
+  <img width="600" src="https://github.com/saeed-anwar/R2Net/blob/master/Figs/R2Net-rain-visual2.png">
 </p>
 
 #### Quantitative Results
