@@ -42,18 +42,34 @@ The architecture for super-resolution.
 </p>
 
 ### SR Test
-1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
+1. Download the trained models and code of our paper from [here](https://drive.google.com/file/d/1yDN4ntb1ozICBWXs24NgG9t92N1i-w_W/view?usp=sharing). The total size for all models is **240MB.**
 
-2. cd to '/R2NetSRTestCode/code', either run **bash TestScripts.sh** or run the following individual commands and find the results in directory **R2NET_SRResults**. 
+2. cd to '/R2NetSRTestCode/code', either run **bash TestR2NET_2x.sh** or  **bash TestR2NET_3x.sh** or **bash TestR2NET_4x.sh.** 
+
+**or run the following individual commands and find the results in directory **R2NET_SRResults**. 
 
     **You can use the following script to test the algorithm.**
 
-``` #Normal
-CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model IERD --n_feats 64 --pre_train ../trained_model/IERD.pt --test_only --save_results --save 'SSID_Results' --testpath ../noisy --testset SIDD
+``` #2x
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --scale 2 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX2.pt --test_only --save_results --chop --save 'R2NET_Set5' --testpath ../LR/LRBI --testset Set5
+
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --scale 2 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX2.pt --test_only --save_results --chop --self_ensemble --save 'R2NETplus_Set5' --testpath ../LR/LRBI --testset Set5
+
+#3x
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --scale 3 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX3.pt --test_only --save_results --chop --save 'R2NET_Set14' --testpath ../LR/LRBI --testset Set14
+
+CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --scale 3 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX3.pt --test_only --save_results --chop --self_ensemble --save 'R2NETplus_Set14' --testpath ../LR/LRBI --testset Set14
+
+#4x
+
+CUDA_VISIBLE_DEVICES=5 python main.py --data_test MyImage --scale 4 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX4.pt --test_only --save_results --chop --save 'R2NET_B100' --testpath ../LR/LRBI --testset BSD100
+
+CUDA_VISIBLE_DEVICES=5 python main.py --data_test MyImage --scale 4 --model R2NET --n_feats 64 --pre_train ../trained_models/R2Net_BIX4.pt --test_only --save_results --chop --self_ensemble --save 'R2NETplus_B100' --testpath ../LR/LRBI --testset BSD100
+
 ```
 
 ### SR Results
-**All the results for SuperResolution R<sup>2</sup>Net can be downloaded from**  [SET5](https://drive.google.com/file/d/1-bTKUvRLHoUf8nZTbL4Hw0_-MJUGjSub/view?usp=sharing) (2MB), [SET5+](https://drive.google.com/file/d/1B4JxIV7OZyLKBle9Yg7zz0l-zIK7AOyb/view?usp=sharing) (2MB), [SET14](https://drive.google.com/file/d/10YEHHlAI1jQT-yqB8md9ta1k51bxpwrk/view?usp=sharing) (12.5MB), [SET14+](https://drive.google.com/file/d/1p34F6DsPi7dVPtASieshnpQaW7S8EnOa/view?usp=sharing) (12MB), [BSD100](https://drive.google.com/file/d/1_Oivg1pwTX8uKhjF_TG-fDfHs0weJDWy/view?usp=sharing) (60MB). [BSD100+](https://drive.google.com/file/d/1NsnpsuxJg8tsiFGOE96nVopvfM6603by/view?usp=sharing) (60MB)  and [Urban100](https://drive.google.com/file/d/17TRk3Gkqax70jBC8eKYNA-KVinPkEJ25/view?usp=sharing) (315GB), [Urban100+](https://drive.google.com/file/d/17t9MVVBZDKdYCXrbxVhgLdif4Vutu88O/view?usp=sharing) (308GB). 
+**All the results for SuperResolution R<sup>2</sup>Net can be downloaded from**  [SET5](https://drive.google.com/file/d/1-bTKUvRLHoUf8nZTbL4Hw0_-MJUGjSub/view?usp=sharing) (2MB), [SET5+](https://drive.google.com/file/d/1B4JxIV7OZyLKBle9Yg7zz0l-zIK7AOyb/view?usp=sharing) (2MB), [SET14](https://drive.google.com/file/d/10YEHHlAI1jQT-yqB8md9ta1k51bxpwrk/view?usp=sharing) (12.5MB), [SET14+](https://drive.google.com/file/d/1p34F6DsPi7dVPtASieshnpQaW7S8EnOa/view?usp=sharing) (12MB), [BSD100](https://drive.google.com/file/d/1_Oivg1pwTX8uKhjF_TG-fDfHs0weJDWy/view?usp=sharing) (60MB). [BSD100+](https://drive.google.com/file/d/1NsnpsuxJg8tsiFGOE96nVopvfM6603by/view?usp=sharing) (60MB)  and [Urban100](https://drive.google.com/file/d/17TRk3Gkqax70jBC8eKYNA-KVinPkEJ25/view?usp=sharing) (315MB), [Urban100+](https://drive.google.com/file/d/17t9MVVBZDKdYCXrbxVhgLdif4Vutu88O/view?usp=sharing) (308MB). 
 
 #### Visual Results
 
