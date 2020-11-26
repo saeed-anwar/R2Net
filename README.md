@@ -27,6 +27,8 @@ Deep convolutional neural networks perform better on images containing spatially
 - imageio
 - pillow
 - matplotlib
+- tqdm 
+- scikit-image
 
 ---
 
