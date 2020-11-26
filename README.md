@@ -44,7 +44,7 @@ The architecture for super-resolution.
 ### SR Test
 1. Download the trained models and code of our paper from [Google Drive](). The total size for all models is **??MB.**
 
-2. cd to '/TestCode/code', run the following scripts and find the results in directory **SR_Results**.
+2. cd to '/R2NetSRTestCode/code', either run **bash TestScripts.sh** or run the following individual commands and find the results in directory **R2NET_SRResults**. 
 
     **You can use the following script to test the algorithm.**
 
