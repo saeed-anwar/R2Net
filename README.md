@@ -1,7 +1,7 @@
 # Attention Based Real Image Restoration
 This repository is for Attention Based Real Image Restoration (R<sup>2</sup>Net) introduced in the following paper
 
-[Saeed Anwar](https://saeed-anwar.github.io/),  Nick Barnes, and Lars Petersson, "Attention Based Real Image Restoration", [arXiv, 2020](http://arxiv.org/abs/2004.13524) 
+[Saeed Anwar](https://saeed-anwar.github.io/),  Nick Barnes, and Lars Petersson, "[Attention Based Real Image Restoration](http://arxiv.org/abs/2004.13524)", IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2021
 
 ## Contents
 1. [Introduction](#introduction)
@@ -185,13 +185,12 @@ Average PSNR/SSIM for JPEG image deblocking for quality factors of 10, 20, 30, a
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
 ```
-@article{Anwar2020R2NET,
+@article{Anwar2021R2NET,
     title={Attention Prior for Real Image Restoration},
     author={Saeed Anwar and Nick Barnes and Lars Petersson},
-    year={2020},
-    eprint={2004.13524},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    journal={IEEE Transactions on Neural Networks and Learning Systems (TNNLS)},
+    year={2021}
+
 }
 
 @article{anwar2019ridnet,
